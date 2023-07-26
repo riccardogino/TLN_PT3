@@ -16,7 +16,6 @@ Per facilitare l'utilizzo della risorsa testuale, abbiamo deciso di utilizzare u
   "name": {
     "id_1": ["t_1", "t_2", "...", "t_n"],
     "id_2": ["t_1", "t_2", "...", "t_n"],
-    ... 
     "id_m": ["t_1", "t_2", "...", "t_n"]
   }
 }
@@ -43,7 +42,6 @@ In funzione dell'input utilizzato, i risultati sono i seguenti:
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 100%;
   }
 </style>
 <table class="center-table">
