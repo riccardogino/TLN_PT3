@@ -35,7 +35,7 @@ In funzione dell'input utilizzato, i risultati sono i seguenti:
 
 |      | Astratto      | Concreto  |
 |------|---------------|-----------|
-| Generico  | pain: 0.17    | door: 0.21  |
-| Specifico | blurriness: 0.08 | ladybug: 0.49 |
+| **Generico**  | pain: 0.17    | door: 0.21  |
+| **Specifico** | blurriness: 0.08 | ladybug: 0.49 |
 
 </center>
