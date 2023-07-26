@@ -1,11 +1,5 @@
 # Relazione LAB-1
 
-<style>
-    body{
-        text-align: justify;
-    }
-</style>
-
 ## Consegna
 Misurazione dell’overlap lessicale tra una serie di definizioni per concetti generici/specifici e concreti/astratti. Partendo dai dati sulle definizioni (presente nella cartella "dati" su Moodle), si richiede di calcolare la similarità 2-a-2 tra le definizioni (ad es. usando la cardinalità dell'intersezione dei lemmi normalizzata sulla lunghezza minima delle definizioni), aggregando (ed effettuando la media degli score di similarità) sulle due dimensioni (concretezza / specificità). 
 
@@ -41,7 +35,7 @@ In funzione dell'input utilizzato, i risultati sono i seguenti:
 
 |      | Astratto      | Concreto  |
 |------|---------------|-----------|
-| Generico  | pain: 0.17    | door: 0.21  |
-| Specifico | blurriness: 0.08 | ladybug: 0.49 |
+| **Generico**  | pain: 0.17    | door: 0.21  |
+| **Specifico** | blurriness: 0.08 | ladybug: 0.49 |
 
 </center>
