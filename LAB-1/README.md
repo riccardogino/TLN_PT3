@@ -37,14 +37,7 @@ Abbiamo poi applicato la formula ad ogni possibile coppia di definizioni e calco
 ## Risultati
 In funzione dell'input utilizzato, i risultati sono i seguenti:
 
-<style>
-  .center-table {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-</style>
-<table class="center-table">
+<table>
     <tr>
         <th></th>
         <th>Astratto</th>
