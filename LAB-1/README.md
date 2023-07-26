@@ -37,20 +37,11 @@ Abbiamo poi applicato la formula ad ogni possibile coppia di definizioni e calco
 ## Risultati
 In funzione dell'input utilizzato, i risultati sono i seguenti:
 
-<table>
-    <tr>
-        <th></th>
-        <th>Astratto</th>
-        <th>Concreto</th>
-    </tr>
-    <tr>
-        <th>Generico</th>
-        <td>pain: <br>0.17</td>
-        <td>door:<br> 0.21</td>
-    </tr>
-    <tr>
-        <th>Specifico</th>
-        <td>blurriness:<br> 0.08</td>
-        <td>ladybug:<br> 0.49</td>
-    </tr>
-</table>
+<center>
+
+|      | Astratto      | Concreto  |
+|------|---------------|-----------|
+| Generico  | pain: 0.17    | door: 0.21  |
+| Specifico | blurriness: 0.08 | ladybug: 0.49 |
+
+</center>
