@@ -71,12 +71,9 @@ def remove_stop_words_it(token_list):
     return clear_tokens
 
 
-def remove_special_char(sentence: str) -> str:
+def remove_white_spaces(sentence: str) -> str:
     return sentence.strip()
 
-
-def get_pos(token_list):
-    return
 
 
 def noise_reduction_it(sentence: str) -> list:
@@ -87,7 +84,7 @@ def noise_reduction_it(sentence: str) -> list:
     return closure(remove_punctuation,
                    remove_stop_words_it,
                    tokenizer,
-                   remove_special_char)(sentence)
+                   remove_white_spaces)(sentence)
 
 
 def noise_reduction_en(sentence: str) -> list:
@@ -99,4 +96,4 @@ def noise_reduction_en(sentence: str) -> list:
                    remove_stop_words,
                    get_lemmatized_tokens_list,
                    tokenizer,
-                   remove_special_char)(sentence)
+                   remove_white_spaces)(sentence)
