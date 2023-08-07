@@ -22,12 +22,14 @@ def get_wordnet_pos(tag):
     elif tag.startswith('R'):
         return wordnet.ADV
     else:
-        return wordnet.NOUN  # Consideriamo il sostantivo come fallback
+        return "unk"  # Consideriamo il sostantivo come fallback
 
 
 def lemmatize_word(word, pos_tag):
     lemmatizer = WordNetLemmatizer()
     pos = get_wordnet_pos(pos_tag)
+    if pos == 'unk':
+        pos = 'n'
     lemma = lemmatizer.lemmatize(word, pos)
     return lemma
 
@@ -40,14 +42,14 @@ def get_lemmatized_tokens_list(tokens):
         lemmatized_words.append(lemma)
     return lemmatized_words
 
+
 def get_lemmatized_tokens_list_pos(tokens):
     tokens_pos = nltk.pos_tag(tokens)
     lemmatized_words = []
     for word, pos_tag in tokens_pos:
         lemma = lemmatize_word(word, pos_tag)
-        lemmatized_words.append((lemma, pos_tag))
+        lemmatized_words.append((lemma, get_wordnet_pos(pos_tag)))
     return lemmatized_words
-
 
 
 tokenizer = word_tokenize
@@ -59,6 +61,7 @@ def remove_punctuation(tokenized_sentence):
         if w.isalpha():
             context.append(w)
     return context
+
 
 def remove_punctuation_pos(tokenized_sentence):
     context = []
@@ -73,9 +76,10 @@ def remove_stop_words(token_list):
     clear_tokens = []
 
     for t in token_list:
-        if t not in stops:
+        if t.lower() not in stops:
             clear_tokens.append(t)
     return clear_tokens
+
 
 def remove_stop_words_pos(token_list):
     stops = set(sw.words('english'))
@@ -123,6 +127,7 @@ def noise_reduction_en(sentence: str) -> list:
                    tokenizer,
                    remove_white_spaces)(sentence)
 
+
 def noise_reduction_en_pos(sentence: str) -> list:
 
     def closure(*funcs) -> list:
@@ -133,4 +138,3 @@ def noise_reduction_en_pos(sentence: str) -> list:
                    get_lemmatized_tokens_list_pos,
                    tokenizer,
                    remove_white_spaces)(sentence)
-
